@@ -1,0 +1,9 @@
+wheel==0.34.2
+nltk==3.4.5
+spacy==2.2.4
+docopt==0.6.2
+numpy==1.17.4
+docopt==0.6.2
+pandas==0.25.3
+textacy==0.10.0
+scikit_learn==0.23.1
