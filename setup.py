@@ -44,7 +44,7 @@ setup(
     author='Alvaro Arranz',
     author_email='alvaro.arranz@outlook.com',
     cmdclass={'install': Install},
-    url='none',
+    url='https://github.com/AlvArranzDom/nluanalyzer',
     keywords='nlu natural language spanish',
     packages=[
         'nluanalyzer',
