@@ -16,6 +16,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 import os
+import nltk
 
 lib_folder = os.path.dirname(os.path.realpath(__file__))
 
@@ -25,25 +26,19 @@ if os.path.isfile(requirement_path):
     with open(requirement_path) as f:
         install_requires = f.read().splitlines()
 
+os.system('python -m spacy download es')
 
-class Install(_install):
-    def run(self):
-        _install.do_egg_install(self)
-        import nltk
-        nltk.download('stopwords')
-        nltk.download('spanish_grammars')
-        import os
-        os.system('python -m spacy download es')
-
+nltk.download('stopwords')
+nltk.download('spanish_grammars')
 
 setup(
     name='nluanalizer',
     version=__version__,
     description='Natural Language Tool to Extract Features from Intents Dataset.',
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/x-rst',
     author='Alvaro Arranz',
     author_email='alvaro.arranz@outlook.com',
-    cmdclass={'install': Install},
     url='https://github.com/AlvArranzDom/nluanalyzer',
     keywords='nlu natural language spanish',
     packages=[

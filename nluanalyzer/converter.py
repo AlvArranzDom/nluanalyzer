@@ -73,7 +73,7 @@ class NLUAnalyzer:
         with open('self.results_path', 'w') as outfile:
             json.dump(analysis_dict, outfile)
 
-        logging.info(f"Successfully saved metrics file in {self.results_path}")
+        logging.info(f"Successfully saved intents analyzed file in {self.results_path}")
 
     @staticmethod
     def __strip_accents(s):
