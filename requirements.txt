@@ -1,4 +1,4 @@
-wheel==0.34.2
+wheel==0.38.1
 nltk==3.4.5
 spacy==2.2.4
 docopt==0.6.2
